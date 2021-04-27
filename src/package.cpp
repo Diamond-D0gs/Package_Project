@@ -1,7 +1,7 @@
 #include "package.hpp"
 
 void Package::PrintSRInfo() {
-    cout << "\nSender information:\n" << endl;
+    cout << "\nShipping address:\n" << endl;
 
     cout << "Name - " << sender.name << endl;
     cout << "Address - " << sender.address << endl;
@@ -9,7 +9,7 @@ void Package::PrintSRInfo() {
     cout << "State - " << sender.state << endl;
     cout << "Zip Code - " << sender.zip << endl;
 
-    cout << "\nRecipient information:\n" << endl;
+    cout << "\nBilling address:\n" << endl;
 
     cout << "Name - " << recipient.name << endl;
     cout << "Address - " << recipient.address << endl;

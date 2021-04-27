@@ -14,7 +14,8 @@ const double WEIGHT_MAX     = 1120.0; // Ounces; Based off USPS 70lb limit
 int main(void) {
     cout << "\nPackage Program\n" << endl;
 
-    cout << "Please enter your information.\n" << endl;
+    cout << "Please enter the Shipping address.\n" << endl;
+    cout << "---------------------------------------" << endl;
     Info sender = GenerateInfo();
     cout << "\nPlease enter the recipiant's information.\n" << endl;
     Info recipient = GenerateInfo();
@@ -24,7 +25,7 @@ int main(void) {
 
     int userSelect = 0;
     cout << "\nPlease select your package type\n" << endl;
-
+    cout << "------------------------------" << endl;
     cout << "1) Standard Shipping Package" << endl;
     cout << "2) Two-Day Shipping Package" << endl;
     cout << "3) Overnight Shipping Package\n" << endl;
