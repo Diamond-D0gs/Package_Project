@@ -22,7 +22,7 @@ void Package::GenInvoice() {
     PrintSRInfo();
 
     double weightCost = ounces * costPerOunce;
-    cout << "\nWeight Cost: " << ounces << "oz * $" << costPerOunce << " = $" << weightCost << endl;
+    cout << "\nWeight Cost: " << ounces << " oz * $" << costPerOunce << " = $" << weightCost << endl;
 
     double totalCost = weightCost;
     cout << "\nTotal Shipping Cost: $" << totalCost << endl;
