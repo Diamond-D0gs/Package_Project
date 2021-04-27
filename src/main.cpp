@@ -5,10 +5,8 @@
 #include "miscstuff.hpp"
 using namespace std;
 
-// test
-
-const double COST_PER_OUNCE = 20.0;
-const double TWO_DAY_FEE    = 20.0; // Two day fee is a flat rate
+const double COST_PER_OUNCE = 0.55;
+const double TWO_DAY_FEE    = 5.0; // Two day fee is a flat rate
 const double OVERNIGHT_FEE  = 2.0;  // Overnight fee is charged per ounce
 const double WEIGHT_MAX     = 1120.0; // Ounces; Based off USPS 70lb limit
 
