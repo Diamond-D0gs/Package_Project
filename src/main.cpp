@@ -25,7 +25,7 @@ int main(void) {
     cout << "\nPlease select your package type\n" << endl;
 
     cout << "1) Standard Shipping Package" << endl;
-    cout << "2) Two Day Shipping Package" << endl;
+    cout << "2) Two-Day Shipping Package" << endl;
     cout << "3) Overnight Shipping Package\n" << endl;
 
     userSelect = ValidateUserInputRange<int>("Please enter your selection: ", "Please enter a valid selection.", 1, 3);
