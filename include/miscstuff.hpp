@@ -7,7 +7,7 @@
 #define MISCSTUFF_H
 
 template <typename T>
-T ValidateUserInputRange(std::string prompt, std::string error, T lower, T upper) {
+T ValidateUserInputRange(std::string prompt, std::string error, T lower, T upper) { //
     bool valid = false;
     T userInput;
     
@@ -19,7 +19,7 @@ T ValidateUserInputRange(std::string prompt, std::string error, T lower, T upper
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Clear cin buffer
             std::cout << error << std::endl;
             std::cout << prompt;
-            std::cin >> userInput;
+            std::cin >> userInput; // Asking for input for userInput 
         }
         
         // Checks to make sure user input is within range
@@ -29,11 +29,10 @@ T ValidateUserInputRange(std::string prompt, std::string error, T lower, T upper
         else { // Print an error if user input is out of range
             std::cout << error << std::endl;
         }
-    } while(valid == false);
+    } while(valid == false); // if false, will return userInput
 
     return userInput;
 }
-
 Info GenerateInfo();
 
 #endif

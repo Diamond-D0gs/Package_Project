@@ -4,8 +4,8 @@
 #define TWODAY_H
 
 class TwoDayPackage: public Package {
-    private: 
-        double twoDayFee;
+    private: // access specifier. These attributes can only be accessed within the object itself
+        double twoDayFee; // attribute double variable, stores the set twoDayFee
 
     public:
         TwoDayPackage(Info &s, Info &r, double o, double cpo, double tdf):

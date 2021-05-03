@@ -6,7 +6,7 @@ using namespace std;
 #ifndef PACKAGE_H
 #define PACKAGE_H
 
-struct Info {
+struct Info { // structure used to store info such as string input from name, address, city and state. As well as an int variable to store the zipcode
     string name;
     string address;
     string city;

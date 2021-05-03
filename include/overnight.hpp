@@ -3,9 +3,9 @@
 #ifndef OVERNIGHT_H
 #define OVERNIGHT_H
 
-class OvernightPackage: public Package {
-    private:
-        double overnightFee;
+class OvernightPackage: public Package { // Class
+    private: // access specifier. These attributes can only be accessed within the object itself
+        double overnightFee; // attribute double variable, stores the overnightFee
 
     public:
         OvernightPackage(Info &s, Info &r, double o, double cpo, double onf):
@@ -13,5 +13,4 @@ class OvernightPackage: public Package {
 
         void GenInvoice() override;
 };
-
 #endif

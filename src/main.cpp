@@ -1,3 +1,8 @@
+//Group: Gabrield, Andres, Skye, Amir
+//Introduction to C++ : Final Project
+//Instructor: Professor Sibiyan
+//Date: May 3rd, 2021
+//
 #include <iostream>
 #include <iomanip>
 #include "package.hpp"
@@ -13,16 +18,15 @@ const double WEIGHT_MAX     = 1120.0; // Ounces; Based off USPS 70lb limit
 
 int main(void) {
     cout << "\nPackage Program\n" << endl;
-
     cout << "Please enter your Shipping info.\n" << endl;
     cout << "-----------------------------------------" << endl;
-    Info sender = GenerateInfo();
+    Info sender = GenerateInfo(); 
     cout << "\nPlease enter recipiant's Shipping info.\n" << endl;
     cout << "-----------------------------------------" << endl;
     Info recipient = GenerateInfo();
     cout << endl;
 
-    double ounces = ValidateUserInputRange<double>("Please enter your package's weight in ounces: ", "Please enter a positive valid weight.", 0.000000001, WEIGHT_MAX);
+    double ounces = ValidateUserInputRange<double>("Please enter your package's weight in ounces: ", "Please enter a positive valid weight.", 0.000000001, WEIGHT_MAX); // validates that (input > 0.000000001 && input < 0.000000001)
 
     int userSelect = 0;
     cout << "\nPlease select your package type\n" << endl;
@@ -34,24 +38,22 @@ int main(void) {
     userSelect = ValidateUserInputRange<int>("Please enter your selection: ", "Please enter a valid selection.", 1, 3);
 
     Package* package = NULL;
-    switch(userSelect) {
-        case (1):
+    switch(userSelect) { // Switch using userSelect input for preferred shipping priority.
+        case (1): //standard shipping
             package = new Package(sender, recipient, ounces, COST_PER_OUNCE);
             break;
-        case (2):
+        case (2): //two day shipping
             package = new TwoDayPackage(sender, recipient, ounces, COST_PER_OUNCE, TWO_DAY_FEE);
             break;
-        case (3):
+        case (3): //overnight shipping
             package = new OvernightPackage(sender, recipient, ounces, COST_PER_OUNCE, OVERNIGHT_FEE);
             break;
         default:
             cout << "Error! Invalid package assignment! Quitting..." << endl;
-            return 1;
+            return 1; 
     }
-
-    cout << setprecision(2) << fixed;
+    cout << setprecision(2) << fixed; // will display any int/double with 2 decimal points for precision. Ex: 0.15.
     package->GenInvoice();
 
     return 0;
 }
-
