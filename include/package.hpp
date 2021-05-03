@@ -14,21 +14,20 @@ struct Info { // structure used to store info such as string input from name, ad
     int    zip;
 };
 
-class Package {
+class Package { //class
     protected:
-        Info sender;
+        Info sender; //protected classes that the user cant touch
         Info recipient;
-        double ounces;
+        double ounces; //protected attributes 
         double costPerOunce;
         double totalCost;
 
         void PrintSRInfo();
 
-    public:
+    public: // user can see Package infos and can use them
         Package(Info &s, Info &r, double o, double cpo):
             sender(s), recipient(r), ounces(o), costPerOunce(cpo) {}
 
-        virtual void GenInvoice();
+        virtual void GenInvoice(); // generates an invoice for user that can be overwritten
 };
-
 #endif

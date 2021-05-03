@@ -2,7 +2,6 @@
 //Introduction to C++ : Final Project
 //Instructor: Professor Sibiyan
 //Date: May 3rd, 2021
-//
 #include <iostream>
 #include <iomanip>
 #include "package.hpp"
@@ -11,10 +10,10 @@
 #include "miscstuff.hpp"
 using namespace std;
 
-const double COST_PER_OUNCE = 0.55; // Dollars
-const double TWO_DAY_FEE    = 5.0; // Two day fee is a flat rate
-const double OVERNIGHT_FEE  = 2.0;  // Overnight fee is charged per ounce
-const double WEIGHT_MAX     = 1120.0; // Ounces; Based off USPS 70lb limit
+const double COST_PER_OUNCE = 0.55; //Dollars
+const double TWO_DAY_FEE    = 5.0; //Two day fee is a flat rate
+const double OVERNIGHT_FEE  = 2.0;  //Overnight fee is charged per ounce
+const double WEIGHT_MAX     = 1120.0; //Ounces; Based off USPS 70lb limit
 
 int main(void) {
     cout << "\nPackage Program\n" << endl;
@@ -38,7 +37,7 @@ int main(void) {
     userSelect = ValidateUserInputRange<int>("Please enter your selection: ", "Please enter a valid selection.", 1, 3);
 
     Package* package = NULL;
-    switch(userSelect) { // Switch using userSelect input for preferred shipping priority.
+    switch(userSelect) { //Switch using userSelect input for preferred shipping priority.
         case (1): //standard shipping
             package = new Package(sender, recipient, ounces, COST_PER_OUNCE);
             break;
@@ -48,7 +47,7 @@ int main(void) {
         case (3): //overnight shipping
             package = new OvernightPackage(sender, recipient, ounces, COST_PER_OUNCE, OVERNIGHT_FEE);
             break;
-        default:
+        default: //makes sure that the user adds Invalid numbers 
             cout << "Error! Invalid package assignment! Quitting..." << endl;
             return 1; 
     }

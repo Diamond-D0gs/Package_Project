@@ -7,11 +7,11 @@
 #define MISCSTUFF_H
 
 template <typename T>
-T ValidateUserInputRange(std::string prompt, std::string error, T lower, T upper) { //
+T ValidateUserInputRange(std::string prompt, std::string error, T lower, T upper) {
     bool valid = false;
     T userInput;
     
-    do {
+    do { 
         std::cout << prompt;
         std::cin >> userInput;
         while (std::cin.fail() == 1) { // Keep repeating until a valid input is detected
@@ -34,5 +34,4 @@ T ValidateUserInputRange(std::string prompt, std::string error, T lower, T upper
     return userInput;
 }
 Info GenerateInfo();
-
 #endif

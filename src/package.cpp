@@ -21,9 +21,8 @@ void Package::PrintSRInfo() { // Prints the info of the sender and recipient
 void Package::GenInvoice() {
     PrintSRInfo();
 
-    double weightCost = ounces * costPerOunce;
+    double weightCost = ounces * costPerOunce;  // stores the weight cost in double weightCost after multiplying ounces * costPerOunce.
     cout << "\nWeight Cost: " << ounces << " oz * $" << costPerOunce << " = $" << weightCost << endl;
-
-    double totalCost = weightCost;
+    double totalCost = weightCost; // stores the total cost in double totalCost after equaling it to double weightCost
     cout << "\nTotal Shipping Cost: $" << totalCost << endl;
 }
